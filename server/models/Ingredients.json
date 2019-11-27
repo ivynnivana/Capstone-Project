@@ -1,0 +1,22 @@
+[
+  {
+    "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_95fa6f5689286a4ffab774da45192494",
+    "label": "Thomato Chicken",
+    "image": "https://www.edamam.com/web-img/a23/a2300a1c6b33bee0963f380782d48e27.jpg",
+    "source": "BBC Good Food",
+    "url": "http://www.bbcgoodfood.com/recipes/94602/",
+    "shareAs": "http://www.edamam.com/recipe/thomato-chicken-95fa6f5689286a4ffab774da45192494/chicken/alcohol-free/591-722-cal",
+    "dietLabels": "Low-Carb",
+    "healthLabels": ["Peanut-Free", "Tree-Nut-Free", "Alcohol-Free"]
+  },
+  {
+    "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_460a72418bb8eba10c59769b0751dc2b",
+    "label": "Chicken paprika",
+    "image": "https://www.edamam.com/web-img/a8e/a8e6b4cd3856e78ad8f84f2a4d4ad8c3.jpg",
+    "source": "BBC",
+    "url": "http://www.bbc.co.uk/food/recipes/chickenpaprikawithle_80341",
+    "shareAs": "http://www.edamam.com/recipe/chicken-paprika-460a72418bb8eba10c59769b0751dc2b/chicken/alcohol-free/591-722-cal",
+    "dietLabels": "Low-Carb",
+    "healthLabels": ["Peanut-Free", "Tree-Nut-Free", "Alcohol-Free"]
+  }
+]
