@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express.Router();
 const fileName = "../../models/Ingredients.json";
-const recipe = require(fileName);
+const recipes = require(fileName);
 // const helper = require("../../helpers/helpers");
 
-//get recipe data
+//get all recipe data
 router.get("/", (req, res) => {
-  res.json(recipe);
+  res.json(recipes);
 });
 
 module.exports = router;

@@ -1,24 +1,25 @@
-import React, { Component } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
-  const submitForm = eventHandler => {
-    const recipeName = eventHandler.target.elements.recipeName.value;
-    eventHandler.preventDefault();
-    console.log(recipeName);
-  };
   return (
     <header>
-      <div>
-        <h1>All You Can Eat</h1>
-        <p>About Us</p>
-        <form onSubmit={submitForm}>
-          <input
-            type="text"
-            placeholder="search ingredients"
-            name="recipeName"
-          ></input>
-          <button>SEARCH</button>
-        </form>
+      <div className="header-container">
+        <Link to="/">
+          <h1 className="app-title">
+            Uber <span className="change-color">Recipes</span>
+          </h1>
+        </Link>
+
+        <div className="nav-bar">
+          <div className="nav-item">
+            <Link to="/">Home</Link>
+          </div>
+
+          <div className="nav-item">
+            <Link to="/about">Contact Us</Link>
+          </div>
+        </div>
       </div>
     </header>
   );

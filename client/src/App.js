@@ -1,15 +1,26 @@
 import React from "react";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
-import "./App.css";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import { BrowserRouter } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
+import "./styles/main.css";
+import Ingredients from "./components/Ingredients";
 
-function App() {
-  return (
-    <>
-      <Header />
-      <Footer />
-    </>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <>
+        <BrowserRouter>
+          <Header />
+          <Switch>
+            <Route path="/" exact component={Ingredients} />
+            <Route path="/about" exact component={About} />
+          </Switch>
+        </BrowserRouter>
+      </>
+    );
+  }
 }
 
 export default App;
