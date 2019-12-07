@@ -1,5 +1,101 @@
 [
   {
+    "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_f158a56b7257f27b443d44785ee9d451",
+    "label": "Passion Fruit Ice Cream recipes",
+    "image": "https://www.edamam.com/web-img/aa4/aa4a9db1994716025877e28c0795f578",
+    "source": "Chez Us",
+    "url": "http://chezus.com/2014/05/25/passion-fruit-ice-cream/",
+    "shareAs": "http://www.edamam.com/recipe/passion-fruit-ice-cream-recipes-f158a56b7257f27b443d44785ee9d451/fruits/591-722-cal",
+
+    "dietLabels": "n/a",
+    "healthLabels": [
+      "Vegetarian",
+      " ",
+      " ",
+      "Peanut-Free",
+      " ",
+      " ",
+      "Tree-Nut-Free"
+    ]
+  },
+  {
+    "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_19f1d38c33d383e55c3a8975d7181d3e",
+    "label": "Coconut Yogurt & Passion Fruit Tartlets recipes",
+    "image": "https://www.edamam.com/web-img/0c1/0c1293b4d206a4e282780576ddd14873",
+    "source": "Tartelette",
+    "url": "http://www.tarteletteblog.com/2015/08/recipeglutenfree-coconut-yogurt-passion.html",
+    "shareAs": "http://www.edamam.com/recipe/coconut-yogurt-passion-fruit-tartlets-recipes-19f1d38c33d383e55c3a8975d7181d3e/fruits/591-722-cal",
+    "dietLabels": "n/a",
+    "healthLabels": [
+      "Vegetarian",
+      " ",
+      " ",
+      "Peanut-Free",
+      " ",
+      " ",
+      "Tree-Nut-Free"
+    ]
+  },
+  {
+    "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_24174c0fadfdf7fcdf1c46bb0649d714",
+    "label": "Coconut Panna Cotta with Tropical Fruit",
+    "image": "https://www.edamam.com/web-img/499/499bbde75b5034fc5e99ab905a9b3fea.jpg",
+    "source": "Cooking Channel",
+    "url": "http://www.cookingchanneltv.com/recipes/daisy-martinez/coconut-panna-cotta-with-tropical-fruit.html",
+    "shareAs": "http://www.edamam.com/recipe/coconut-panna-cotta-with-tropical-fruit-24174c0fadfdf7fcdf1c46bb0649d714/fruits/591-722-cal",
+    "dietLabels": "Low-Carb",
+    "healthLabels": ["Peanut-Free", " ", " ", "Tree-Nut-Free"]
+  },
+  {
+    "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_4cdf4def06f1b89bed38d5d55a183328",
+    "label": "Coconut Tart with Passion Fruit and Lime Syrup",
+    "image": "https://www.edamam.com/web-img/65a/65a6f656fa8196741a30441b7f3a07ff.jpg",
+    "source": "Food52",
+    "url": "https://food52.com/recipes/1905-coconut-tart-with-passion-fruit-and-lime-syrup",
+    "shareAs": "http://www.edamam.com/recipe/coconut-tart-with-passion-fruit-and-lime-syrup-4cdf4def06f1b89bed38d5d55a183328/fruits/591-722-cal",
+    "dietLabels": "n/a",
+    "healthLabels": [
+      "Vegetarian",
+      " ",
+      " ",
+      "Peanut-Free",
+      " ",
+      " ",
+      "Tree-Nut-Free"
+    ]
+  },
+  {
+    "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_b3af9c135ec524e0ac6cdd8e9189885d",
+    "label": "Cheesecake Tart with Tropical Fruits",
+    "image": "https://www.edamam.com/web-img/5ab/5abf6b95d3cb0ef6ee8d02ba3c518799.jpg",
+    "source": "Bon Appetit",
+    "url": "http://www.bonappetit.com/recipe/cheesecake-tart-with-tropical-fruits",
+    "shareAs": "http://www.edamam.com/recipe/cheesecake-tart-with-tropical-fruits-b3af9c135ec524e0ac6cdd8e9189885d/fruits/591-722-cal",
+    "dietLabels": "n/a",
+    "healthLabels": ["Peanut-Free", " ", " ", "Tree-Nut-Free"]
+  },
+  {
+    "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_6deac76d8c1f6d6b35cedc83e7836782",
+    "label": "Chocolate fondue with fruit platter",
+    "image": "https://www.edamam.com/web-img/5ac/5ac9666787e0aab91750e6e6ee01b39b.jpg",
+    "source": "BBC",
+    "url": "http://www.bbc.co.uk/food/recipes/chocolatefonduewithf_10465",
+    "shareAs": "http://www.edamam.com/recipe/chocolate-fondue-with-fruit-platter-6deac76d8c1f6d6b35cedc83e7836782/fruits/591-722-cal",
+    "dietLabels": "n/a",
+    "healthLabels": [
+      "Vegan",
+      " ",
+      " ",
+      "Vegetarian",
+      " ",
+      " ",
+      "Peanut-Free",
+      " ",
+      " ",
+      "Tree-Nut-Free"
+    ]
+  },
+  {
     "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_2e86171b0db05caba4e4a90c1a8cda7f",
     "label": "Frittata with Bacon Fresh Ricotta and Greens",
     "image": "https://www.edamam.com/web-img/6a6/6a624dae50df21a8482388e731db38e0.jpg",

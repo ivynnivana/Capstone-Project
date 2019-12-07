@@ -112,6 +112,57 @@ header {
 .change-color {
   color: green;
 }
+.form-container {
+  margin-left: 5vw;
+  margin-top: 5vh;
+}
+.name-input,
+.email-input,
+.message-input {
+  width: 250px;
+  background-color: #fafafa;
+  border-color: none;
+  border: none;
+}
+.message-input {
+  height: 100px;
+}
+.contact-container {
+  width: 100%;
+  border-top: 0.1vw solid #e1e1e1;
+}
+.contact-para {
+  font-family: sans-serif;
+  margin-left: 5vw;
+}
+.contact-title {
+  margin-left: 5vw;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  margin-bottom: 3.5vh;
+  font-weight: 550;
+  margin-top: 10px;
+}
+.contact-button {
+  background-color: green;
+  margin-top: 10px;
+  width: 70vw;
+  height: 40px;
+  border-radius: 4px;
+  &:hover {
+    background-color: lightgreen;
+  }
+}
+.name-title,
+.email-title,
+.message-title {
+  font-family: sans-serif;
+}
+.name-div,
+.email-div,
+.message-div {
+  margin-top: 15px;
+}
 
 @include medium {
   header {
@@ -189,6 +240,11 @@ header {
   }
   .form-input {
     width: 200px;
+  }
+  .name-input,
+  .email-input,
+  .message-input {
+    width: 500px;
   }
 }
 
@@ -305,5 +361,19 @@ header {
   }
   .form-input {
     width: 300px;
+  }
+  .name-input,
+  .email-input,
+  .message-input {
+    width: 550px;
+  }
+  .contact-button {
+    width: 550px;
+  }
+  .contact-container {
+    margin-top: 30px;
+  }
+  .contact-title {
+    margin-top: 30px;
   }
 }
