@@ -51,7 +51,7 @@ header {
   font-family: sans-serif;
 }
 .recipe-title {
-  margin-left: 1vw;
+  margin-left: 3vw;
   font-weight: 700;
   font-size: 1.5rem;
   width: 90%;
@@ -187,6 +187,11 @@ header {
   &:hover {
     transform: scale(1.1);
   }
+}
+.left-arrow,
+.right-arrow {
+  width: 25px;
+  height: 20px;
 }
 
 @include medium {

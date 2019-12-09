@@ -1,6 +1,8 @@
 import React, { Component, useState } from "react";
 import axios from "axios";
 import Hero from "./Hero";
+import LeftArrow from "../../src/assets/left-arrow.svg";
+import RightArrow from "../../src/assets/right-arrow.svg";
 
 export default class Ingredients extends Component {
   state = {
@@ -121,7 +123,12 @@ export default class Ingredients extends Component {
           <div className="card">
             <div className="card-container">
               <p className="recipe-title">Recipes</p>
-              <button onClick={this.nextHandler}>Next Page</button>
+              <img className="left-arrow" src={LeftArrow} />
+              <img
+                className="right-arrow"
+                onClick={this.nextHandler}
+                src={RightArrow}
+              />
               {ingredientSection}
             </div>
           </div>

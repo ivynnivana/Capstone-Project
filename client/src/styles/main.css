@@ -79,7 +79,7 @@ header {
 }
 
 .recipe-title {
-  margin-left: 1vw;
+  margin-left: 3vw;
   font-weight: 700;
   font-size: 1.5rem;
   width: 90%;
@@ -254,6 +254,12 @@ header {
 .image:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.left-arrow,
+.right-arrow {
+  width: 25px;
+  height: 20px;
 }
 
 @media only screen and (min-width: 768px) {
