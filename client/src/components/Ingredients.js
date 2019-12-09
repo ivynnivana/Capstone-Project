@@ -6,8 +6,18 @@ export default class Ingredients extends Component {
   state = {
     ingredientsInfo: [],
     currentIngredientsInfo: [],
-    count: 6,
+    tempArray: [],
+    count: 8,
     start: 1
+  };
+
+  nextHandler = eventHandler => {
+    eventHandler.preventDefault();
+    this.setState({
+      tempArray: this.state.currentIngredientsInfo.splice(0, this.state.count)
+    });
+
+    console.log("clicked");
   };
 
   clickHandler = url => () => {
@@ -46,7 +56,8 @@ export default class Ingredients extends Component {
 
         this.setState({
           ingredientsInfo: answer.data,
-          currentIngredientsInfo: answer.data
+          currentIngredientsInfo: answer.data,
+          tempArray: answer.data.splice(0, this.state.count)
         });
         console.log(
           this.state.ingredientsInfo.map(ingredient =>
@@ -60,35 +71,34 @@ export default class Ingredients extends Component {
     console.log(this.state);
     if (this.state.currentIngredientsInfo !== undefined) {
       console.log(this.state.currentIngredientsInfo);
+      //   let tempArray = this.state.currentIngredientsInfo.splice(0, 8);
 
-      const ingredientSection = this.state.currentIngredientsInfo.map(
-        ingredient => (
-          <div className="individual-card">
-            <div className="card-image">
-              <img className="image" src={ingredient.image} />
+      const ingredientSection = this.state.tempArray.map(ingredient => (
+        <div className="individual-card">
+          <div className="card-image">
+            <img className="image" src={ingredient.image} />
+          </div>
+          <div className="labels-container">
+            <div className="class-label">
+              <p>{ingredient.label}</p>
             </div>
-            <div className="labels-container">
-              <div className="class-label">
-                <p>{ingredient.label}</p>
-              </div>
-              <div className="card-source">
-                <p>{ingredient.source}</p>
-              </div>
-              <div>
-                <p className="health-label">{ingredient["healthLabels"]}</p>
-              </div>
-              <div>
-                <button
-                  className="card-button"
-                  onClick={this.clickHandler(ingredient.url)}
-                >
-                  View Recipe
-                </button>
-              </div>
+            <div className="card-source">
+              <p>{ingredient.source}</p>
+            </div>
+            <div>
+              <p className="health-label">{ingredient["healthLabels"]}</p>
+            </div>
+            <div>
+              <button
+                className="card-button"
+                onClick={this.clickHandler(ingredient.url)}
+              >
+                View Recipe
+              </button>
             </div>
           </div>
-        )
-      );
+        </div>
+      ));
 
       return (
         <>
@@ -111,6 +121,7 @@ export default class Ingredients extends Component {
           <div className="card">
             <div className="card-container">
               <p className="recipe-title">Recipes</p>
+              <button onClick={this.nextHandler}>Next Page</button>
               {ingredientSection}
             </div>
           </div>
