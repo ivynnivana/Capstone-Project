@@ -254,7 +254,7 @@
   },
   {
     "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_14a9928c89e281a063283d2f9295e229",
-    "label": "Tortellini In Broth With Roasted Vegetables",
+    "label": "Tortellini With Roasted Vegetables",
     "image": "https://www.edamam.com/web-img/9d0/9d08c4a1b3af67a0c75d74b06f29c46c.jpg",
     "source": "Fine Cooking",
     "url": "http://www.finecooking.com/recipes/tortellini-broth-roasted-vegetables.aspx",
@@ -264,7 +264,7 @@
   },
   {
     "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_2fd015a5e1a77895ea86925860fe7c4d",
-    "label": "Eat For Eight Bucks Vegetable Enchiladas",
+    "label": "Vegetable Enchiladas",
     "image": "https://www.edamam.com/web-img/3d7/3d7dd23b511db96ece800f50af770f0f.jpg",
     "source": "Serious Eats",
     "url": "http://www.seriouseats.com/recipes/2009/10/eat-for-eight-bucks-vegetable-enchiladas-recipe.html",
@@ -364,7 +364,7 @@
   },
   {
     "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_29b3bbd487d39d774c216574ee2f40b1",
-    "label": "Roasted Vegetable Soup With Chicken Melts",
+    "label": "Vegetable Soup With Chicken Melts",
     "image": "https://www.edamam.com/web-img/c52/c52ab269bc32e617ed464643e7b823af.jpg",
     "source": "Real Simple",
     "url": "https://www.realsimple.com/food-recipes/browse-all-recipes/vegetables-oup-chicken-melts",
@@ -416,7 +416,7 @@
   },
   {
     "uri": "http://www.edamam.com/ontologies/edamam.owl#recipe_f62cee5c976662392c867efd85b8ec9d",
-    "label": "Roasted Vegetables with Quinoa recipes",
+    "label": "Roasted Vegetables with Quinoa",
     "image": "https://www.edamam.com/web-img/7bc/7bc7d05e455256ba3cd9d1a2c855a4b4",
     "source": "Martha Stewart",
     "url": "http://www.marthastewart.com/1050735/roasted-vegetables-quinoa",

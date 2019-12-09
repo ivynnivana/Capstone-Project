@@ -5,7 +5,9 @@ import Hero from "./Hero";
 export default class Ingredients extends Component {
   state = {
     ingredientsInfo: [],
-    currentIngredientsInfo: []
+    currentIngredientsInfo: [],
+    count: 6,
+    start: 1
   };
 
   clickHandler = url => () => {
@@ -36,22 +38,26 @@ export default class Ingredients extends Component {
 
   componentDidMount() {
     console.log("component mounted");
-    axios.get("http://localhost:5000/ingredients").then(answer => {
-      console.log(answer.data);
+    const { count, start } = this.state;
+    axios
+      .get(`http://localhost:5000/ingredients?count=${count}&start=${start}`)
+      .then(answer => {
+        console.log(answer.data);
 
-      this.setState({
-        ingredientsInfo: answer.data,
-        currentIngredientsInfo: answer.data
+        this.setState({
+          ingredientsInfo: answer.data,
+          currentIngredientsInfo: answer.data
+        });
+        console.log(
+          this.state.ingredientsInfo.map(ingredient =>
+            ingredient.label.split(" ")
+          )
+        );
       });
-      console.log(
-        this.state.ingredientsInfo.map(ingredient =>
-          ingredient.label.split(" ")
-        )
-      );
-    });
   }
 
   render() {
+    console.log(this.state);
     if (this.state.currentIngredientsInfo !== undefined) {
       console.log(this.state.currentIngredientsInfo);
 

@@ -9,7 +9,7 @@ export default function Hero() {
           <div className="hero-overlay"></div>
           <p className="hero-slogan">
             Your Favorite Recipes <br />
-            Delivered Fast
+            Delivered With One Click
           </p>
         </div>
       </div>
