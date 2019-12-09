@@ -59,7 +59,7 @@ export default class Ingredients extends Component {
         ingredient => (
           <div className="individual-card">
             <div className="card-image">
-              <img src={ingredient.image} />
+              <img className="image" src={ingredient.image} />
             </div>
             <div className="labels-container">
               <div className="class-label">

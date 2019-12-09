@@ -163,6 +163,30 @@ header {
 .message-div {
   margin-top: 15px;
 }
+.individual-card {
+  margin-bottom: 20px;
+}
+.card-button {
+  background-color: green;
+  &:hover {
+    background-color: lightgreen;
+  }
+  color: white;
+}
+.form-button {
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  width: 100px;
+  margin-left: 10px;
+}
+.image {
+  width: 50%;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
 
 @include medium {
   header {
@@ -193,12 +217,7 @@ header {
   .card-image {
     width: 100%;
   }
-  .labels-container {
-    width: 30vw;
-  }
-  .individual-card {
-    padding: 25px;
-  }
+
   #header1 {
     background-image: url(../assets/hero-image-four.jpeg);
     position: relative;
@@ -236,7 +255,7 @@ header {
     width: 100%;
   }
   .search-bar {
-    top: 55%;
+    top: 60%;
   }
   .form-input {
     width: 200px;

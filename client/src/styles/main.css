@@ -223,6 +223,38 @@ header {
   margin-top: 15px;
 }
 
+.individual-card {
+  margin-bottom: 20px;
+}
+
+.card-button {
+  background-color: green;
+  color: white;
+}
+
+.card-button:hover {
+  background-color: lightgreen;
+}
+
+.form-button {
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  width: 100px;
+  margin-left: 10px;
+}
+
+.image {
+  width: 50%;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.image:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 @media only screen and (min-width: 768px) {
   header {
     height: 100px;
@@ -266,12 +298,6 @@ header {
   .card-image {
     width: 100%;
   }
-  .labels-container {
-    width: 30vw;
-  }
-  .individual-card {
-    padding: 25px;
-  }
   #header1 {
     background-image: url(../assets/hero-image-four.jpeg);
     position: relative;
@@ -309,7 +335,7 @@ header {
     width: 100%;
   }
   .search-bar {
-    top: 55%;
+    top: 60%;
   }
   .form-input {
     width: 200px;
