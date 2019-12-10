@@ -5,7 +5,6 @@ const recipes = require(fileName);
 
 //get all recipe data
 router.get("/", (req, res) => {
-  req.query.start, req.query.count;
   res.json(recipes);
 });
 

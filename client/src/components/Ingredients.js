@@ -5,21 +5,61 @@ import LeftArrow from "../../src/assets/left-arrow.svg";
 import RightArrow from "../../src/assets/right-arrow.svg";
 
 export default class Ingredients extends Component {
-  state = {
-    ingredientsInfo: [],
-    currentIngredientsInfo: [],
-    tempArray: [],
-    count: 8,
-    start: 1
-  };
-
+  constructor(props) {
+    super(props);
+    this.nextHandler = this.nextHandler.bind(this);
+    this.backHandler = this.backHandler.bind(this);
+    this.state = {
+      ingredientsInfo: [],
+      currentIngredientsInfo: [],
+      tempArray: [],
+      newTempArray: [],
+      count: 8,
+      start: 1,
+      leftArrow: (
+        <img
+          className="left-arrow"
+          onClick={this.backHandler}
+          src={LeftArrow}
+        />
+      ),
+      rightArrow: (
+        <img
+          className="right-arrow"
+          onClick={this.nextHandler}
+          src={RightArrow}
+        />
+      )
+    };
+  }
   nextHandler = eventHandler => {
     eventHandler.preventDefault();
-    this.setState({
-      tempArray: this.state.currentIngredientsInfo.splice(0, this.state.count)
-    });
+    let array2 = this.state.newTempArray;
+    let array1 = this.state.tempArray;
+    this.setState(
+      {
+        tempArray: this.state.currentIngredientsInfo.splice(0, 8),
+        newTempArray: array1.concat(array2)
+      },
+      () => {
+        // let array1 = this.state.tempArray;
+        //this.setState({ newTempArray: array2.concat(array1) }, () =>
+        console.log(this.state.newTempArray);
+        //);
+      }
+    );
 
     console.log("clicked");
+  };
+  backHandler = eventHandler => {
+    eventHandler.preventDefault();
+
+    this.setState(
+      {
+        tempArray: this.state.newTempArray.splice(0, 8)
+      },
+      () => console.log(this.state.newTempArray)
+    );
   };
 
   clickHandler = url => () => {
@@ -28,6 +68,7 @@ export default class Ingredients extends Component {
   submitForm = eventHandler => {
     eventHandler.preventDefault();
     const labelInput = eventHandler.target.label.value;
+    eventHandler.target.reset();
     const newArray = this.state.ingredientsInfo.map(ingredient =>
       ingredient.label.split(" ")
     );
@@ -43,35 +84,65 @@ export default class Ingredients extends Component {
       item => this.state.ingredientsInfo[item]
     );
     console.log(newIngredientInfo);
+    if (newIngredientInfo.length < 8) {
+      this.setState({
+        leftArrow: "",
+        rightArrow: ""
+      });
+    }
+
     this.setState({
+      tempArray: newIngredientInfo,
       currentIngredientsInfo: newIngredientInfo
     });
   };
 
   componentDidMount() {
-    console.log("component mounted");
+    console.log("ingredients component mounted");
     const { count, start } = this.state;
-    axios
-      .get(`http://localhost:5000/ingredients?count=${count}&start=${start}`)
-      .then(answer => {
-        console.log(answer.data);
+    axios.get(`http://localhost:5000/ingredients`).then(answer => {
+      console.log(answer.data);
 
-        this.setState({
-          ingredientsInfo: answer.data,
-          currentIngredientsInfo: answer.data,
-          tempArray: answer.data.splice(0, this.state.count)
-        });
-        console.log(
-          this.state.ingredientsInfo.map(ingredient =>
-            ingredient.label.split(" ")
-          )
-        );
+      this.setState({
+        ingredientsInfo: answer.data,
+        currentIngredientsInfo: answer.data.slice(8, answer.data.length),
+        tempArray: answer.data.slice(0, this.state.count)
+        //newTempArray: answer.data.slice(0, this.state.count)
       });
+      //   console.log(
+      //     this.state.ingredientsInfo.map(ingredient =>
+      //       ingredient.label.split(" ")
+      //     )
+      //   );
+    });
+  }
+  componentDidUpdate(prevProps) {
+    if (this.props !== prevProps) {
+      console.log("testing CompUpdate");
+      console.log(this.state.ingredientsInfo);
+      // console.log(this.state.ingredientsInfo.slice(0, this.state.count));
+      this.setState(
+        {
+          tempArray: this.state.ingredientsInfo.slice(0, this.state.count),
+          leftArrow: <img className="left-arrow" src={LeftArrow} />,
+          rightArrow: (
+            <img
+              className="right-arrow"
+              onClick={this.nextHandler}
+              src={RightArrow}
+            />
+          )
+        },
+        () => console.log(this.state.tempArray)
+      );
+    }
   }
 
   render() {
-    console.log(this.state);
+    console.log("ingredients in render");
+
     if (this.state.currentIngredientsInfo !== undefined) {
+      console.log(this.state.ingredientsInfo);
       console.log(this.state.currentIngredientsInfo);
       //   let tempArray = this.state.currentIngredientsInfo.splice(0, 8);
 
@@ -123,12 +194,14 @@ export default class Ingredients extends Component {
           <div className="card">
             <div className="card-container">
               <p className="recipe-title">Recipes</p>
-              <img className="left-arrow" src={LeftArrow} />
-              <img
+
+              {this.state.leftArrow}
+              {/* <img
                 className="right-arrow"
                 onClick={this.nextHandler}
                 src={RightArrow}
-              />
+              /> */}
+              {this.state.rightArrow}
               {ingredientSection}
             </div>
           </div>
