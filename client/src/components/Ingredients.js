@@ -3,6 +3,7 @@ import axios from "axios";
 import Hero from "./Hero";
 import LeftArrow from "../../src/assets/left-arrow.svg";
 import RightArrow from "../../src/assets/right-arrow.svg";
+// import { threadId } from "worker_threads";
 
 export default class Ingredients extends Component {
   constructor(props) {
@@ -13,53 +14,46 @@ export default class Ingredients extends Component {
       ingredientsInfo: [],
       currentIngredientsInfo: [],
       tempArray: [],
-      newTempArray: [],
-      count: 8,
-      start: 1,
-      leftArrow: (
-        <img
-          className="left-arrow"
-          onClick={this.backHandler}
-          src={LeftArrow}
-        />
-      ),
-      rightArrow: (
-        <img
-          className="right-arrow"
-          onClick={this.nextHandler}
-          src={RightArrow}
-        />
-      )
+
+      count: 8, //how many are added after hitting next (sum)
+      start: 8, //first index after clicking next (index)
+      leftArrow: "",
+      rightArrow: ""
     };
   }
   nextHandler = eventHandler => {
     eventHandler.preventDefault();
-    let array2 = this.state.newTempArray;
-    let array1 = this.state.tempArray;
-    this.setState(
-      {
-        tempArray: this.state.currentIngredientsInfo.splice(0, 8),
-        newTempArray: array1.concat(array2)
-      },
-      () => {
-        // let array1 = this.state.tempArray;
-        //this.setState({ newTempArray: array2.concat(array1) }, () =>
-        console.log(this.state.newTempArray);
-        //);
-      }
-    );
-
-    console.log("clicked");
+    if (this.state.start < this.state.currentIngredientsInfo.length)
+      this.setState(
+        {
+          tempArray: this.state.currentIngredientsInfo.slice(
+            this.state.start,
+            this.state.start + this.state.count
+          )
+        },
+        () =>
+          this.setState({
+            start: this.state.start + this.state.count
+          })
+      );
   };
   backHandler = eventHandler => {
     eventHandler.preventDefault();
+    if (this.state.start >= 2 * this.state.count)
+      this.setState(
+        {
+          tempArray: this.state.currentIngredientsInfo.slice(
+            this.state.start - 2 * this.state.count,
+            this.state.start - this.state.count
+          )
+        },
+        () =>
+          this.setState({
+            start: this.state.start - this.state.count
+          })
+      );
 
-    this.setState(
-      {
-        tempArray: this.state.newTempArray.splice(0, 8)
-      },
-      () => console.log(this.state.newTempArray)
-    );
+    console.log("clicked");
   };
 
   clickHandler = url => () => {
@@ -105,15 +99,23 @@ export default class Ingredients extends Component {
 
       this.setState({
         ingredientsInfo: answer.data,
-        currentIngredientsInfo: answer.data.slice(8, answer.data.length),
-        tempArray: answer.data.slice(0, this.state.count)
-        //newTempArray: answer.data.slice(0, this.state.count)
+        currentIngredientsInfo: answer.data,
+        tempArray: answer.data.slice(0, this.state.count),
+        leftArrow: (
+          <img
+            className="left-arrow"
+            onClick={this.backHandler}
+            src={LeftArrow}
+          />
+        ),
+        rightArrow: (
+          <img
+            className="right-arrow"
+            onClick={this.nextHandler}
+            src={RightArrow}
+          />
+        )
       });
-      //   console.log(
-      //     this.state.ingredientsInfo.map(ingredient =>
-      //       ingredient.label.split(" ")
-      //     )
-      //   );
     });
   }
   componentDidUpdate(prevProps) {
