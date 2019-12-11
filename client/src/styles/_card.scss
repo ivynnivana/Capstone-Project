@@ -85,14 +85,16 @@ header {
   margin-left: 40vw;
   width: 50%;
   position: absolute;
-  top: 45%;
+  top: 23%;
   display: flex;
 }
 .form-input {
-  height: 20px;
+  height: 35px;
   width: 150px;
   border-color: none;
   border: none;
+  border-radius: 4px;
+  background-color: lightgrey;
 }
 .class-label {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
@@ -121,9 +123,13 @@ header {
 .email-input,
 .message-input {
   width: 250px;
-  background-color: #fafafa;
+  background-color: lightgrey;
   border-color: none;
   border: none;
+}
+.name-input,
+.email-input {
+  height: 30px;
 }
 .message-input {
   height: 100px;
@@ -147,7 +153,7 @@ header {
 .contact-button {
   background-color: green;
   margin-top: 10px;
-  width: 70vw;
+  width: 79vw;
   height: 40px;
   border-radius: 4px;
   &:hover {
@@ -261,15 +267,23 @@ header {
     width: 100%;
   }
   .search-bar {
-    top: 60%;
+    top: 45%;
   }
   .form-input {
     width: 200px;
+    background-color: lightgrey;
   }
   .name-input,
   .email-input,
   .message-input {
     width: 500px;
+  }
+  .name-input,
+  .email-input {
+    height: 30px;
+  }
+  .contact-button {
+    width: 65vw;
   }
 }
 
@@ -382,15 +396,21 @@ header {
     font-style: italic;
   }
   .search-bar {
-    top: 35%;
+    top: 45%;
   }
   .form-input {
     width: 300px;
+    background-color: lightgrey;
   }
   .name-input,
   .email-input,
   .message-input {
     width: 550px;
+    border-radius: 4px;
+  }
+  .name-input,
+  .email-input {
+    height: 30px;
   }
   .contact-button {
     width: 550px;
