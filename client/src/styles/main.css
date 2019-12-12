@@ -58,6 +58,7 @@ header {
   padding: 20px;
   color: black;
   font-family: sans-serif;
+  background-color: lightcoral;
 }
 
 .nav-bar {
@@ -158,7 +159,6 @@ header {
 
 .card-button {
   padding: 7px;
-  color: #b3c1b0;
 }
 
 .change-color {
@@ -236,12 +236,8 @@ header {
 }
 
 .card-button {
-  background-color: green;
+  background-color: lightcoral;
   color: white;
-}
-
-.card-button:hover {
-  background-color: lightgreen;
 }
 
 .form-button {
